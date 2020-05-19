@@ -15,10 +15,8 @@ namespace ConsoleApp2
         {
             this.name = name;
             this.ID = ID;
+            this.divisiones = divisiones;
         }
-        public override string ToString()
-        {
-            return name + " " + ID;
-        }
+        public List<Division> divisiones;
     }
 }

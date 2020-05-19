@@ -11,22 +11,37 @@ namespace ConsoleApp2
     {
         public static void Main(string[] args)
         {
-            string var1;
+            int var1;
             List<Empresa> empresas = new List<Empresa>();
-            Console.WriteLine("¿Quiere utilizar algun archivo para cargar informacion?");
-            Console.WriteLine("(si) , (no)");
-            var1 = Console.ReadLine();
-            if (var1 == "si")
-            {
-                empresas = Load();
-                showEmpresas(empresas);
-            }
-            else if (var1 == "no")
-            {
-                addEmpresa(empresas);
-                Save(empresas);
-            }
+            Console.WriteLine("1) Cargar y mostrar infromacion");
+            Console.WriteLine("2) Crear una empresa");
+            Console.WriteLine("3) Cerrar programa");
+            var1 =Convert.ToInt32(Console.ReadLine());
 
+            while (var1 != 3)
+            {
+
+
+                if (var1 == 1)
+                {
+                    empresas = Load();
+                    showEmpresas(empresas);
+                }
+                else if (var1 == 2)
+                {
+                    addEmpresa(empresas);
+                    Save(empresas);
+                }
+                else
+                {
+                    Console.WriteLine("Numero no valido");
+                }
+                Console.WriteLine("1) Cargar y mostrar infromacion");
+                Console.WriteLine("2) Mostrar informacion");
+                Console.WriteLine("3) Cerrar programa");
+                var1 = Convert.ToInt32(Console.ReadLine());
+
+            }
         }
 
         static public void addEmpresa(List<Empresa> empresas)

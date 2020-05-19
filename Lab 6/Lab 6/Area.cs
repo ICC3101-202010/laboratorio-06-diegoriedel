@@ -4,8 +4,11 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    class Area
+    class Area : Division
     {
-     
+        public Area(string name)
+        {
+            this.Name = name;
+        }
     }
 }

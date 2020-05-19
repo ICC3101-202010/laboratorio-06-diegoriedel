@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    class Seccion
+    class Seccion : Division
     {
     }
 }

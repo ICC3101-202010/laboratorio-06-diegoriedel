@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp2
 {
-    class Bloque
+    class Bloque : Division
     {
 
     }

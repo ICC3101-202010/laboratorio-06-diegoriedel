@@ -6,10 +6,10 @@ namespace ConsoleApp2
 {
     class Division
     {
-        public string name;
-        public Division(string name)
+        private string name;
+        public string Name { get => name; set => name = value; }
+        public Division()
         {
-            this.name = name;
         }
 
     }
